@@ -1,6 +1,7 @@
 # What is this project for?
 
-I have created this project to demonstrate some principles and patterns at one of our internal workshops at Yahoo!7.
+I have created this project for our internal workshops at Yahoo!7. I will demonstrate some common principles, patterns
+and anti patterns.
 
 # Intro
 
@@ -26,6 +27,6 @@ Then run phpunit tests by running:
 
     ant phpunit
 
-# Contributors
+# That is all
 
-* Artur Esjmont (https://github.com/ejsmont-artur) (http://artur.ejsmont.org/blog/)
+Visit me at http://artur.ejsmont.org/blog/
