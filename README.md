@@ -11,11 +11,18 @@ design patterns.
 
 # Dependency Injection
 
-Almost every class here uses dependency injection as it is one of the most fundamental principles.
+Almost every class here uses dependency injection, as it is one of the most fundamental principles.
+
+In most cases you want to avoid the "new" keyword as much as possible, so that your classes could work with
+any implementation.
 
 # Coding to contract
 
 All the classes depend on interfaces. This way implementations can be swapped out at any time.
+
+Contracts are easier to maintain and conform to when they are more explicit. Avoid associative arrays, dynamic data 
+structures and magic methods. Avoid eval etc. They may be flexible tools, but make it harder to figure out what is
+the contract, what is public, what is the meanind and structure od the data etc.
 
 # Single Responsibility Principle
 
@@ -34,6 +41,11 @@ plan to reuse a lot of the code, but you may still be better off to use composit
 can be reused in any context without the need to extend any classes which makes it more flexible.
 
 Composition also allows you for smaller classes and promotes Single Responsibility Principle.
+
+# Open Closed Principle
+
+Dependency injection is a good way to add functionality in the future. Depending on interfaces also promotes 
+future extensions.
 
 # Desing Patterns and electricity ;)
 
