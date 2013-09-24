@@ -17,6 +17,24 @@ Almost every class here uses dependency injection as it is one of the most funda
 
 All the classes depend on interfaces. This way implementations can be swapped out at any time.
 
+# Single Responsibility Principle
+
+As you can see all the classes have very narrow responsibilities and do a very specific thing.
+This specialization allows you to reuse them in different context, but at the same time 
+provides a level of abstraction so that you can forget about the details and thing in simpler terms.
+
+Each class should have a comment explaining it's puprose and responsibility. If you cant explain it in
+a single sentence it is doing too much.
+
+# Composition over inheritance
+
+As you can see there is no inheritance in these examples. The only place where i use the "extends" keyword
+is in the unit tests. In general you can have one or maybe two levels of abstract classes if you really
+plan to reuse a lot of the code, but you may still be better off to use composition instead. Objects used
+can be reused in any context without the need to extend any classes which makes it more flexible.
+
+Composition also allows you for smaller classes and promotes Single Responsibility Principle.
+
 # Desing Patterns and electricity ;)
 
 I had this idea recently that some of the design patterns translate nicely into the way our power supplies work.
@@ -44,8 +62,8 @@ Examples:
 ## Strategy
 
 Strategy is similar to adapter but it usually does the actual work. Strategy is just an alternative
-implementation of the functionality, with often examples of sorting, encryption and validation as examples
-of strategy pattern. In fact it is one of he most common patterns.
+implementation of the functionality. Common examples of strategies are sorting algorithms, 
+encryption, comparator and validation. In fact it is one of he most common patterns.
 
 Examples:
 - current provided by the power plant (via the grid)
