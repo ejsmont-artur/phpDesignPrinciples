@@ -52,6 +52,14 @@ Examples:
 - current provided by a diesel power generator
 - current provided by a solar panel
 
+# Installing dependencies
+
+You will need APC and pecl_http extensions, on recent ubuntu you can try:
+
+    sudo apt-get update
+    sudo apt-get install libcurl3 php5-dev libcurl4-gnutls-dev libmagic-dev
+    sudo pecl install pecl_http
+
 # Running tests
 
 Execute ant composer target to download all pre-requisites:
