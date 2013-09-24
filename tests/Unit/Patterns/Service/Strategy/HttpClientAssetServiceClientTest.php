@@ -5,7 +5,7 @@ namespace PhpDesignPrinciples\Tests\Unit\Patterns\Service\Strategy\HttpClientAss
 use PhpDesignPrinciples\Patterns\Service\Strategy\HttpClientAssetServiceClient;
 use PhpDesignPrinciples\Patterns\Service\Config\WebServiceConfig;
 
-class FactoryTest extends \PHPUnit_Framework_TestCase {
+class HttpClientAssetServiceClientTest extends \PHPUnit_Framework_TestCase {
 
     /**
      * @var SimpleHttpClientInterface|PHPUnit

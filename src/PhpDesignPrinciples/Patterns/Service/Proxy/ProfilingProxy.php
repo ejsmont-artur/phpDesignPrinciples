@@ -10,6 +10,8 @@ use PhpDesignPrinciples\Patterns\Service\AssetServiceClientInterface;
  * NOTE: proxy does not extend any classes, it implements the same interface that is implemented by the
  * target. Proxy is the extension cord, same plug as the hairdryer just gives you more range.
  * Proxy contains reference to the target object and may delegate calls to it.
+ * 
+ * WARNING: this code has not been tested yet :)
  */
 class ProfilingProxy implements AssetServiceClientInterface {
 
@@ -32,7 +34,7 @@ class ProfilingProxy implements AssetServiceClientInterface {
      * 
      * @param int $threadId
      * @throws Exception on any errors or if asset does not exist
-     * @return AssetDto
+     * @return PhpDesignPrinciples\Patterns\Service\Dto\AssetDto
      */
     public function getAsset($threadId) {
         $startTime = microtime(true);

@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpDesignPrinciples\Patterns\Cache\Adapter\DoctrineCacheAdapter;
+namespace PhpDesignPrinciples\Patterns\Cache\Adapter;
 
 use PhpDesignPrinciples\Patterns\Cache\CacheInterface;
 use Doctrine\Common\Cache\Cache;
@@ -21,6 +21,8 @@ use Doctrine\Common\Cache\Cache;
  * not be coupled to Doctrine itself. We can switch to zend or anything we want at any time without changing the app.
  * 
  * NOTE: Adapter is also known as Wrapper, as it wraps existing functionality and presents it in different form.
+ * 
+ * WARNING: this code has not been tested yet :)
  */
 class DoctrineCacheAdapter implements CacheInterface {
 

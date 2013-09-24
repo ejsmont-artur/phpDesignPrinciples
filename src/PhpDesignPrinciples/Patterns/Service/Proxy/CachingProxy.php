@@ -4,6 +4,7 @@ namespace PhpDesignPrinciples\Patterns\Service\Proxy;
 
 use PhpDesignPrinciples\Patterns\Cache\CacheInterface;
 use PhpDesignPrinciples\Patterns\Service\AssetServiceClientInterface;
+use PhpDesignPrinciples\Patterns\Service\Dto\AssetDto;
 
 /**
  * Caches service calls based on the method name and arguments
@@ -11,6 +12,8 @@ use PhpDesignPrinciples\Patterns\Service\AssetServiceClientInterface;
  * NOTE: proxy does not extend any classes, it implements the same interface that is implemented by the
  * target. Proxy is the extension cord, same plug as the hairdryer just gives you more range.
  * Proxy contains reference to the target object and may delegate calls to it.
+ * 
+ * WARNING: this code has not been tested yet :) 
  */
 class CachingProxy implements AssetServiceClientInterface {
 
@@ -42,7 +45,7 @@ class CachingProxy implements AssetServiceClientInterface {
      * 
      * @param int $threadId
      * @throws Exception on any errors or if asset does not exist
-     * @return AssetDto
+     * @return PhpDesignPrinciples\Patterns\Service\Dto\AssetDto
      */
     public function getAsset($threadId) {
         $cacheKey = 'getAsset' . $threadId;

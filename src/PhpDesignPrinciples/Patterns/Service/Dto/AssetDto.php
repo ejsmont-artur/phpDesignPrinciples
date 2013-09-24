@@ -20,6 +20,19 @@ class AssetDto {
     private $abstract;
     private $body;
 
+    /**
+     * @var double this is just to see that instances are reused
+     */
+    private $instanceUid;
+
+    public function __construct() {
+        $this->instanceUid = md5(microtime(true) . '-' . mt_rand(1, 10000000));
+    }
+
+    public function getInstanceUid() {
+        return $this->instanceUid;
+    }
+
     public function getThreadId() {
         return $this->threadId;
     }

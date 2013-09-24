@@ -2,14 +2,16 @@
 
 namespace PhpDesignPrinciples\Patterns\Http\Strategy;
 
-use PhpDesignPrinciples\Patterns\Http\HttpClientInterface;
-use \HttpRequest;
+use PhpDesignPrinciples\Patterns\Http\SimpleHttpClientInterface;
 use \Exception;
+use \HttpRequest;
 
 /**
  * Uses PECL to fetch urls.
+ * 
+ * WARNING: this code has not been tested yet :)
  */
-class PeclHttpUrlLoader implements HttpClientInterface {
+class PeclHttpUrlLoader implements SimpleHttpClientInterface {
 
     /**
      * Fetches content from a HTTP server.
@@ -19,7 +21,7 @@ class PeclHttpUrlLoader implements HttpClientInterface {
      * @return string response from the server
      */
     public function get($url) {
-        $request = $this->getRequect($url, HttpRequest::METH_GET);
+        $request = $this->getRequest($url, HttpRequest::METH_GET);
         try {
             // this could be parametrized using optional options interface
             $options = array(

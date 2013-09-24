@@ -15,7 +15,7 @@ interface AssetServiceClientInterface {
      * 
      * @param int $threadId
      * @throws Exception on any errors or if asset does not exist
-     * @return AssetDto
+     * @return PhpDesignPrinciples\Patterns\Service\Dto\AssetDto
      */
     public function getAsset($threadId);
 
